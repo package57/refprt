@@ -48,8 +48,8 @@ int main()
 }
 // this is what you would like to do - since 'tack' is global, you'd think that doing something to 'tack' would work
 // but it wont...because of the way the compiler works, compared to Cobol for example
-// in Cobol, everything is global, and, the compile looks at everything and takes notes along the way
-// if at the end something is not defined, only then does it issue an error
+// in Cobol, everything is global, and, the compiler looks at everything and takes notes along the way
+// if at the end, something is not defined, only then does it issue an error
 // hence, 'paragraphs', the name for functions/methods in Cobol don't need parameters or return values because everything is global
 // the C/C++ compiler is top down, and the manner of defining functions/methods - forces you to declare or define things in advance
 // this results in the creation of a new variable of local scope
@@ -85,7 +85,7 @@ void Incrementptr(int * ptr)  // accepting a pointer and modifying the value poi
     std::cout << "local value from ptr " << local << std::endl;   // de-reference pointer to tack
 
     // ptr++;  this would increase the value of the pointer!!! - boom
-    (* ptr) ++;   // de-reference ( refer to the value pointed to) then increment the value
+    (* ptr) ++;   // de-reference ( refer to the value pointed to) then increment the value  
 
 }
 // So...this leaves you with option three; use a reference
